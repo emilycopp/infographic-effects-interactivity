@@ -131,4 +131,16 @@ footer {
 
 .tip-1, .tip-2, .tip-3 {
   padding-top: 2.5rem;
+  animation: tips 2s linear forwards;
+}
+
+@keyframes tips {
+
+  0% {
+    transform: rotateY(0deg);;
+  }
+
+  100% {
+    transform: rotateY(-360deg);;
+  }
 }
