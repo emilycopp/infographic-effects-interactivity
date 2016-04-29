@@ -103,6 +103,58 @@ svg {
   transform: rotate(20deg);
 }
 
+.needs {
+  opacity: 0;
+  transition: all 200ms ease-in;
+}
+
+.js-needs-animate .needs {
+  opacity: 1;
+  animation: all 250ms linear;
+}
+
+.hour {
+  transition: all 200ms ease-in;
+  transform-origin: 116.49px 99.37px;
+}
+
+.js-hour-animate .hour {
+  animation: hour-rotate 6s linear infinite;
+  transform-origin: 116.49px 99.37px;
+}
+
+@keyframes hour-rotate {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.minute {
+  transition: all 200ms ease-in;
+  transform-origin: 116.49px 99.37px;
+}
+
+.js-minute-animate .minute {
+  animation: minute-rotate 1s linear infinite;
+  transform-origin: 116.49px 99.37px;
+}
+
+@keyframes minute-rotate {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .carrot {
   transition: all .5s linear;
   cursor: pointer;
@@ -119,7 +171,101 @@ svg {
 
 .js-recipe-animate {
   opacity: 1;
-  animation: svg-jiggle 250ms linear;
+  animation: all 250ms linear;
+}
+
+.winner {
+  transform-origin: 77px 27px;
+  transition: all .5s linear;
+  cursor: pointer;
+}
+
+.js-winner-animate .winner {
+  opacity: 1;
+  animation: jiggle-scale 5s linear;
+}
+
+@keyframes jiggle-scale {
+
+  0% {
+    transform: rotate(10deg) scale(1, 1);
+  }
+
+  10% {
+    transform: rotate(-10deg) scale(1.1, 1.1);
+  }
+
+  20% {
+    transform: rotate(10deg) scale(1.2, 1.2);
+  }
+
+  30% {
+    transform: rotate(-10deg) scale(1.1, 1.1);
+  }
+
+  40% {
+    transform: rotate(10deg) scale(1, 1);
+  }
+
+  50% {
+    transform: rotate(-10deg) scale(1.1, 1.1);
+  }
+
+  60% {
+    transform: rotate(10deg) scale(1.2, 1.2);
+  }
+
+  70% {
+    transform: rotate(-10deg) scale(1.2, 1.2);
+  }
+
+  80% {
+    transform: rotate(10deg) scale(1.1, 1.1);
+  }
+
+  90% {
+    transform: rotate(-10deg) scale(1, 1);
+  }
+
+  100% {
+    transform: rotate(.64deg) scale(1, 1);
+  }
+}
+
+.lightning {
+  transform-origin: 230px 100px;
+  transition: all .5s linear;
+  cursor: pointer;
+}
+
+.lightning:hover {
+  animation: lightning 2s ease infinite;
+}
+
+@keyframes lightning {
+
+  0% {
+    fill: #f9f2af;
+  }
+
+  25% {
+    fill: #fcf8d6;
+    transform: scale(1.2, 1.2);
+  }
+
+  50% {
+    fill: #f9ed32;
+    transform: scale(1, 1);
+  }
+
+  75% {
+    fill: #fcf8d6;
+    transform: scale(1.2, 1.2);
+  }
+
+  100% {
+    fill: #f9ed32;
+  }
 }
 
 footer {
@@ -131,16 +277,25 @@ footer {
 
 .tip-1, .tip-2, .tip-3 {
   padding-top: 2.5rem;
-  animation: tips 2s linear forwards;
+}
+
+.tips {
+  opacity: 0;
+  transition: all 200ms ease-in;
+}
+
+.js-tips-animate {
+  opacity: 1;
+  animation: tips 1.5s linear forwards;
 }
 
 @keyframes tips {
 
   0% {
-    transform: rotateY(0deg);;
+    transform: rotateY(0deg);
   }
 
   100% {
-    transform: rotateY(-360deg);;
+    transform: rotateY(-360deg);
   }
 }
