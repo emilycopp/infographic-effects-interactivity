@@ -1,5 +1,5 @@
 var $needs = $('.family');
-var $recipe = $('.recipe');
+var $ingredients = $('.recipe');
 var $winner = $('.cups');
 var $hour = $('.requires');
 var $minute = $('.requires');
@@ -32,11 +32,11 @@ $needs.waypoint(function (direction) {
   }
 }, { offset: '60%' });
 
-$recipe.waypoint(function (direction) {
+$ingredients.waypoint(function (direction) {
   if (direction == 'down') {
-    $recipe.addClass('js-recipe-animate');
+    $ingredients.addClass('js-ingredients-animate');
   } else {
-    $recipe.removeClass('js-recipe-animate');
+    $ingredients.removeClass('js-ingredients-animate');
   }
 }, { offset: '50%' });
 

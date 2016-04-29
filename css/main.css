@@ -157,6 +157,7 @@ svg {
 
 .carrot {
   transition: all .5s linear;
+  transform-origin: 60px 94px;
   cursor: pointer;
 }
 
@@ -164,12 +165,122 @@ svg {
   transform: rotate(20deg);
 }
 
-.recipe {
+.tomato {
+  transition: all .5s linear;
+  transform-origin: 140px 100px;
+  cursor: pointer;
+}
+
+.tomato:hover {
+  transform: rotate(20deg);
+}
+
+.celery {
+  transition: all .5s linear;
+  transform-origin: 227px 87px;
+  cursor: pointer;
+}
+
+.celery:hover {
+  transform: rotate(20deg);
+}
+
+.spinach {
+  transition: all .5s linear;
+  transform-origin: 301.6px 84px;
+  cursor: pointer;
+}
+
+.spinach:hover {
+  transform: rotate(20deg);
+}
+
+.kale {
+  transition: all .5s linear;
+  transform-origin: 374.6px 90px;
+  cursor: pointer;
+}
+
+.kale:hover {
+  transform: rotate(20deg);
+}
+
+.parsley {
+  transition: all .5s linear;
+  transform-origin: 450px 94px;
+  cursor: pointer;
+}
+
+.parsley:hover {
+  transform: rotate(20deg);
+}
+
+.lemon {
+  transition: all .5s linear;
+  transform-origin: 57px 185px;
+  cursor: pointer;
+}
+
+.lemon:hover {
+  transform: rotate(20deg);
+}
+
+.beet {
+  transition: all .5s linear;
+  transform-origin: 132px 185px;
+  cursor: pointer;
+}
+
+.beet:hover {
+  transform: rotate(20deg);
+}
+
+.onion {
+  transition: all .5s linear;
+  transform-origin: 227px 185px;
+  cursor: pointer;
+}
+
+.onion:hover {
+  transform: rotate(20deg);
+}
+
+.garlic {
+  transition: all .5s linear;
+  transform-origin: 300px 185px;
+  cursor: pointer;
+}
+
+.garlic:hover {
+  transform: rotate(20deg);
+}
+
+.cayenne {
+  transition: all .5s linear;
+  transform-origin: 374.5px 185px;
+  cursor: pointer;
+}
+
+.cayenne:hover {
+  transform: rotate(20deg);
+}
+
+.salt {
+  transition: all .5s linear;
+  transform-origin: 441px 185px;
+  cursor: pointer;
+}
+
+.salt:hover {
+  transform: rotate(20deg);
+}
+
+.ingredients {
   opacity: 0;
   transition: all 200ms ease-in;
 }
 
-.js-recipe-animate {
+.js-ingredients-animate .ingredients {
   opacity: 1;
   animation: all 250ms linear;
 }
