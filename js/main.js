@@ -1,4 +1,6 @@
 var $needs = $('.family');
+var $fruitWeight = $('.fruit-weight');
+var $lightning = $('.lightning');
 var $ingredients = $('.recipe');
 var $winner = $('.cups');
 var $hour = $('.requires');
@@ -8,15 +10,16 @@ var $tips = $('.tips');
 var $percent = $('#percent');
 var percentMax = parseInt($percent.attr('data-max'), 10);
 var current = 0;
+var updateTick;
+var updatePercent;
 
-
-var updateTick = function () {
+updateTick = function () {
   if (current < percentMax) {
     requestAnimationFrame(updatePercent);
   }
 };
 
-var updatePercent = function () {
+updatePercent = function () {
   current += 0.3;
   $percent.html(Math.round(current));
   updateTick();
@@ -24,13 +27,21 @@ var updatePercent = function () {
 
 updatePercent();
 
+$fruitWeight.on('click', function () {
+  $fruitWeight.toggleClass('fruit-weight-engaged');
+});
+
+$lightning.on('click', function () {
+  $lightning.toggleClass('lightning-engaged');
+});
+
 $needs.waypoint(function (direction) {
   if (direction == 'down') {
     $needs.addClass('js-needs-animate');
   } else {
     $needs.removeClass('js-needs-animate');
   }
-}, { offset: '60%' });
+}, {offset: '60%'});
 
 $ingredients.waypoint(function (direction) {
   if (direction == 'down') {
@@ -38,7 +49,7 @@ $ingredients.waypoint(function (direction) {
   } else {
     $ingredients.removeClass('js-ingredients-animate');
   }
-}, { offset: '50%' });
+}, {offset: '50%'});
 
 $winner.waypoint(function (direction) {
   if (direction == 'down') {
@@ -46,7 +57,7 @@ $winner.waypoint(function (direction) {
   } else {
     $winner.removeClass('js-winner-animate');
   }
-}, { offset: '50%' });
+}, {offset: '50%'});
 
 $hour.waypoint(function (direction) {
   if (direction == 'down') {
@@ -54,7 +65,7 @@ $hour.waypoint(function (direction) {
   } else {
     $hour.removeClass('js-hour-animate');
   }
-}, { offset: '40%' });
+}, {offset: '40%'});
 
 $minute.waypoint(function (direction) {
   if (direction == 'down') {
@@ -62,7 +73,7 @@ $minute.waypoint(function (direction) {
   } else {
     $minute.removeClass('js-minute-animate');
   }
-}, { offset: '40%' });
+}, {offset: '40%'});
 
 $tips.waypoint(function (direction) {
   if (direction == 'down') {
@@ -70,4 +81,4 @@ $tips.waypoint(function (direction) {
   } else {
     $tips.removeClass('js-tips-animate');
   }
-}, { offset: '90%' });
+}, {offset: '90%'});

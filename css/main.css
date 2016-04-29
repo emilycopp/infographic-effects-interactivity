@@ -113,6 +113,39 @@ svg {
   animation: all 250ms linear;
 }
 
+.fruit-weight {
+  transform-origin: 250px 152px;
+  transition: all .5s linear;
+  cursor: pointer;
+}
+
+.fruit-weight-engaged {
+  animation: show 3s linear forwards;
+}
+
+@keyframes show {
+
+  0% {
+    transform: rotate(5deg);
+  }
+
+  25% {
+    transform: rotate(-5deg);
+  }
+
+  50% {
+    transform: rotate(5deg);
+  }
+
+  75% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 .hour {
   transition: all 200ms ease-in;
   transform-origin: 116.49px 99.37px;
@@ -344,39 +377,45 @@ svg {
 }
 
 .lightning {
-  transform-origin: 230px 100px;
   transition: all .5s linear;
   cursor: pointer;
 }
 
-.lightning:hover {
-  animation: lightning 2s ease infinite;
+.lightning-engaged path {
+  animation: lightning 1s linear forwards;
 }
 
 @keyframes lightning {
 
   0% {
-    fill: #f9f2af;
+    fill: #fcf5b1;
   }
 
   25% {
-    fill: #fcf8d6;
-    transform: scale(1.2, 1.2);
+    fill: #fff;
   }
 
   50% {
-    fill: #f9ed32;
-    transform: scale(1, 1);
+    fill: #fcf5b1;
   }
 
   75% {
-    fill: #fcf8d6;
-    transform: scale(1.2, 1.2);
+    fill: #fff;
   }
 
   100% {
     fill: #f9ed32;
   }
+}
+
+.weight {
+  transform-origin: 342px 97px;
+  transition: all .5s linear;
+  cursor: pointer;
+}
+
+.weight:hover {
+  animation: jiggle-scale 2s ease infinite;
 }
 
 footer {
