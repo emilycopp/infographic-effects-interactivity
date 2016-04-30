@@ -5,6 +5,7 @@ var $ingredients = $('.recipe');
 var $winner = $('.cups');
 var $hour = $('.requires');
 var $minute = $('.requires');
+var $line = $('.line');
 var $tips = $('.tips');
 
 var $percent = $('#percent');
@@ -29,10 +30,6 @@ updatePercent();
 
 $fruitWeight.on('click', function () {
   $fruitWeight.toggleClass('fruit-weight-engaged');
-});
-
-$lightning.on('click', function () {
-  $lightning.toggleClass('lightning-engaged');
 });
 
 $needs.waypoint(function (direction) {
@@ -74,6 +71,10 @@ $minute.waypoint(function (direction) {
     $minute.removeClass('js-minute-animate');
   }
 }, {offset: '40%'});
+
+$line.waypoint(function () {
+  $line.addClass('line-animation');
+}, {offset: '90%'});
 
 $tips.waypoint(function (direction) {
   if (direction == 'down') {

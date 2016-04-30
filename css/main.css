@@ -381,8 +381,8 @@ svg {
   cursor: pointer;
 }
 
-.lightning-engaged path {
-  animation: lightning 1s linear forwards;
+.lightning path:hover {
+  animation: lightning 2s linear infinite;
 }
 
 @keyframes lightning {
@@ -416,6 +416,21 @@ svg {
 
 .weight:hover {
   animation: jiggle-scale 2s ease infinite;
+}
+
+.line-animation {
+  animation: line-drawing 5s ease-in forwards;
+}
+
+@keyframes line-drawing {
+
+  0% {
+    stroke-dasharray: 0, 400;
+  }
+
+  100% {
+    stroke-dasharray: 400, 400;
+  }
 }
 
 footer {
