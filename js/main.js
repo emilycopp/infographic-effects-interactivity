@@ -5,7 +5,7 @@ var $ingredients = $('.recipe');
 var $winner = $('.cups');
 var $hour = $('.requires');
 var $minute = $('.requires');
-var $line = $('.line');
+var $line = $('.benefits');
 var $tips = $('.tips');
 
 var $percent = $('#percent');
@@ -72,9 +72,13 @@ $minute.waypoint(function (direction) {
   }
 }, {offset: '40%'});
 
-$line.waypoint(function () {
-  $line.addClass('line-animation');
-}, {offset: '90%'});
+$line.waypoint(function (direction) {
+  if (direction == 'down') {
+    $line.addClass('js-line-animate');
+  } else {
+    $line.removeClass('js-line-animate');
+  }
+}, {offset: '40%'});
 
 $tips.waypoint(function (direction) {
   if (direction == 'down') {

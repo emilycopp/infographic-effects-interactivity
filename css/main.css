@@ -120,10 +120,10 @@ svg {
 }
 
 .fruit-weight-engaged {
-  animation: show 3s linear forwards;
+  animation: rotate 3s linear forwards;
 }
 
-@keyframes show {
+@keyframes rotate {
 
   0% {
     transform: rotate(5deg);
@@ -418,8 +418,12 @@ svg {
   animation: jiggle-scale 2s ease infinite;
 }
 
-.line-animation {
-  animation: line-drawing 5s ease-in forwards;
+.line {
+  stroke-dasharray: 0, 400;
+}
+
+.js-line-animate .line {
+  animation: line-drawing 3s ease-in forwards;
 }
 
 @keyframes line-drawing {
